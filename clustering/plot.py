@@ -3,8 +3,9 @@ Some provided code for plotting the clusters using matplotlib
 """
 
 import math
-import urllib2
 import matplotlib.pyplot as plt
+
+from urllib.request import urlopen
 
 
 # URLS for various important datasets
@@ -35,7 +36,7 @@ def plot_clusters(data_table, cluster_list, draw_centers = False):
         fips_to_line[data_table[line_idx][0]] = line_idx
      
     # Load map image
-    map_file = urllib2.urlopen(MAP_URL)
+    map_file = urlopen(MAP_URL)
     map_img = plt.imread(map_file)
 
     # Scale plot to get size similar to CodeSkulptor version

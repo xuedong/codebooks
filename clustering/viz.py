@@ -12,8 +12,9 @@ DESKTOP = True
 
 import math
 import random
-import urllib2
 import cluster
+
+from urllib.request import urlopen
 
 # conditional imports
 if DESKTOP:
@@ -44,10 +45,10 @@ def load_data_table(data_url):
     Import a table of county-based cancer risk data
     from a csv format file
     """
-    data_file = urllib2.urlopen(data_url)
-    data = data_file.read()
+    data_file = urlopen(data_url)
+    data = data_file.read().decode('utf8')
     data_lines = data.split('\n')
-    print "Loaded", len(data_lines), "data points"
+    print("Loaded " + str(len(data_lines)) + " data points")
     data_tokens = [line.split(',') for line in data_lines]
     return [[tokens[0], float(tokens[1]), float(tokens[2]), int(tokens[3]), float(tokens[4])] 
             for tokens in data_tokens]
@@ -100,7 +101,7 @@ def run_example():
         singleton_list.append(cluster.Cluster(set([line[0]]), line[1], line[2], line[3], line[4]))
 
     cluster_list = sequential_clustering(singleton_list, 15)
-    print "Displaying", len(cluster_list), "sequential clusters"
+    print("Displaying " + str(len(cluster_list)) + " sequential clusters")
 
     #cluster_list = alg_project3_solution.hierarchical_clustering(singleton_list, 9)
     #print "Displaying", len(cluster_list), "hierarchical clusters"

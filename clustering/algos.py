@@ -41,8 +41,8 @@ def slow_closest_pair(cluster_list):
     """
     current_dist, current_idx1, current_idx2 = float('inf'), -1, -1
 
-    for index_i in xrange(len(cluster_list)):
-        for index_j in xrange(len(cluster_list)):
+    for index_i in range(len(cluster_list)):
+        for index_j in range(len(cluster_list)):
             if index_i != index_j:
                 dist, idx1, idx2 = pair_distance(cluster_list, index_i, index_j)
                 if dist < current_dist:
@@ -64,11 +64,12 @@ def fast_closest_pair(cluster_list):
     cluster_list[idx1] and cluster_list[idx2] have minimum distance dist.       
     """
     number_clusters = len(cluster_list)
+    cluster_list.sort(key = lambda cluster: cluster.horiz_center())
     
     if number_clusters < 4:
         return slow_closest_pair(cluster_list)
     else:
-        half = number_clusters/2
+        half = int(number_clusters/2)
         left = cluster_list[:half]
         right = cluster_list[half:]
         closest_left = fast_closest_pair(left)
@@ -134,15 +135,10 @@ def hierarchical_clustering(cluster_list, num_clusters):
     """
     while len(cluster_list) > num_clusters:
         closest_pair = fast_closest_pair(cluster_list)
-        first = cluster_list[closest_pair[1]]
-        second = cluster_list[closest_pair[2]]
-        # remove these two clusters
-        cluster_list.remove(first)
-        cluster_list.remove(second)
-        # merge these two clusters
-        cluster = first.merge_clusters(second)
-        # add this new cluster back to the list
-        cluster_list.append(cluster)
+        # merge two clusters
+        cluster_list[closest_pair[1]].merge_clusters(cluster_list[closest_pair[2]])
+        # remove the second one
+        cluster_list.pop(closest_pair[2])
         # resorting
         cluster_list.sort(key = lambda cluster: cluster.horiz_center())
         
@@ -161,42 +157,40 @@ def kmeans_clustering(cluster_list, num_clusters, num_iterations):
     Input: List of clusters, integers number of clusters and number of iterations
     Output: List of clusters whose length is num_clusters
     """
-    
-    # position initial clusters at the location of clusters with largest populations
-    length = len(cluster_list)
-    # Initialize k centers as clusters with the largest population
-    largest_population = list(cluster_list)
-    largest_population.sort(key = lambda cluster: cluster.total_population())
-    k_centers = list()
+    # position initial clusters at the location of clusters with largest populations    
+    sorted_cluster = list(cluster_list)
+    sorted_cluster.sort(key = lambda cluster: cluster.total_population())
+    centers = list()
     for idx_k in range(1, num_clusters+1):
-        x_coordinates = largest_population[len(largest_population)-idx_k].horiz_center()
-        y_coordinates = largest_population[len(largest_population)-idx_k].vert_center()
-        k_centers.append((x_coordinates, y_coordinates))
-    assert len(k_centers) == num_clusters
-    # Clustering
-    for indx_i in range(num_iterations):
-        # Initialize k empty clusters
+        horiz = sorted_cluster[len(sorted_cluster)-idx_k].horiz_center()
+        vert = sorted_cluster[len(sorted_cluster)-idx_k].vert_center()
+        centers.append((horiz, vert))
+    assert len(centers) == num_clusters # force k centers
+    
+    # clustering
+    for idx_i in range(num_iterations):
+        # initialize k empty clusters
         clusters = list()
         for idx_k in range(num_clusters):
-            clusters.append(cluster.Cluster(set(), k_centers[idx_k][0], k_centers[idx_k][1], 0, 0))
-        # Distribute the closest points
-        for idx_j in range(length):
-            min_distance = float('inf')
+            clusters.append(cluster.Cluster(set(), centers[idx_k][0], centers[idx_k][1], 0, 0))
+        # assigning closest points
+        for idx_j in range(len(cluster_list)):
+            min_dist = float('inf')
             for idx_k in range(num_clusters):
-                # Compute the distance
-                vert_distance = cluster_list[idx_j].vert_center() - k_centers[idx_k][1]
-                horiz_distance = cluster_list[idx_j].horiz_center() - k_centers[idx_k][0]
-                distance = math.sqrt(vert_distance**2 + horiz_distance**2)
-                if distance < min_distance:
+                # compute the distance
+                vert = cluster_list[idx_j].vert_center() - centers[idx_k][1]
+                horiz = cluster_list[idx_j].horiz_center() - centers[idx_k][0]
+                dist = math.sqrt(vert**2 + horiz**2)
+                if dist < min_dist:
                     merge_cluster = clusters[idx_k]
-                    min_distance = distance
+                    min_dist = dist
             merge_cluster.merge_clusters(cluster_list[idx_j])
-        # Adjust the cluster centers
-        if indx_i < num_iterations-1:
-            for idx_f in range(num_clusters):
-                x_coordinates = clusters[idx_f].horiz_center()
-                y_coordinates = clusters[idx_f].vert_center()
-                k_centers[idx_f] = (x_coordinates, y_coordinates)
+        # adjusting the cluster centers
+        if idx_i < num_iterations-1:
+            for idx_k in range(num_clusters):
+                horiz = clusters[idx_k].horiz_center()
+                vert = clusters[idx_k].vert_center()
+                centers[idx_k] = (horiz, vert)
     
     return clusters
 
