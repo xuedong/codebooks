@@ -1,5 +1,5 @@
 """
-Some provided code for plotting the clusters using matplotlib
+Code for plotting the clusters using matplotlib
 """
 
 import math

@@ -1,5 +1,5 @@
 """
-Cluster class for Module 3
+Cluster class
 """
 
 import math

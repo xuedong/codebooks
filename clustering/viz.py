@@ -1,10 +1,6 @@
 """
 Example code for creating and visualizing
 cluster of county-based cancer risk data
-
-Note that you must download the file
-http://www.codeskulptor.org/#alg_clusters_matplotlib.py
-to use the matplotlib version of this code
 """
 
 # Flavor of Python - desktop or CodeSkulptor
@@ -18,10 +14,10 @@ from urllib.request import urlopen
 
 # conditional imports
 if DESKTOP:
-    import algos      # desktop project solution
+    import algos
     import plot
 else:
-    #import userXX_XXXXXXXX as alg_project3_solution   # CodeSkulptor project solution
+    #import userXX_XXXXXXXX as xxxxxxxx
     import alg_clusters_simplegui
     import codeskulptor
     codeskulptor.set_timeout(30)
@@ -103,17 +99,17 @@ def run_example():
     cluster_list = sequential_clustering(singleton_list, 15)
     print("Displaying " + str(len(cluster_list)) + " sequential clusters")
 
-    #cluster_list = alg_project3_solution.hierarchical_clustering(singleton_list, 9)
+    #cluster_list = algos.hierarchical_clustering(singleton_list, 9)
     #print "Displaying", len(cluster_list), "hierarchical clusters"
 
-    #cluster_list = alg_project3_solution.kmeans_clustering(singleton_list, 9, 5)	
+    #cluster_list = algos.kmeans_clustering(singleton_list, 9, 5)	
     #print "Displaying", len(cluster_list), "k-means clusters"
 
 
     # draw the clusters using matplotlib or simplegui
     if DESKTOP:
         plot.plot_clusters(data_table, cluster_list, False)
-        #alg_clusters_matplotlib.plot_clusters(data_table, cluster_list, True)  #add cluster centers
+        #plot.plot_clusters(data_table, cluster_list, True)  #add cluster centers
     else:
         alg_clusters_simplegui.PlotClusters(data_table, cluster_list)   # use toggle in GUI to add cluster centers
 

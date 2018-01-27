@@ -9,7 +9,7 @@ http://commons.wikimedia.org/wiki/File:USA_Counties_with_FIPS_and_names.svg
 """
 
 import math
-import urllib2
+from urllib.request import urlopen
 try:
     import simplegui
 except ImportError:
@@ -84,8 +84,8 @@ class PlotCountyData:
         """
         Load cancer risk data from .csv file
         """    
-        data_file = urllib2.urlopen(DATA_3108_URL)
-        data = data_file.read()
+        data_file = urlopen(DATA_3108_URL)
+        data = data_file.read().decode('utf8')
         data_lines = data.split('\n')
         print "Loaded", len(data_lines), "data points"
         data_tokens = [line.split(',') for line in data_lines]
