@@ -51,6 +51,7 @@ def compute_alignment_matrix(seq_x, seq_y, scoring_matrix, global_flag):
     alignment_matrix = [[0 for dummy_j in range(cols+1)] for dummy_i in range(rows+1)]
 
     for idx_i in range(1, rows+1):
+        #print(idx_i-1), print(seq_x[idx_i-1])
         score = alignment_matrix[idx_i-1][0] + scoring_matrix[seq_x[idx_i-1]]['-']
         if global_flag:
             alignment_matrix[idx_i][0] = score
