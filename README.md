@@ -1,5 +1,5 @@
 # Code Books
-Implementations of various algorithms using different programming languages (Python, Rust, Go, OCaml, C/C++, etc), demo with Jupyter notebook (Jupyter notebook may be not available for all the languages mentioned beforehand, we'll see...).
+Implementations of various algorithms using different programming languages (Python, Rust, Go, OCaml, C/C++, etc), demo with Jupyter notebook (Jupyter notebook may be not available for all the languages mentioned beforehand, we'll see...). This repo will only contain classic algorithms in different computer science related fields, for more implementations, see also my [hacker-rank](https://github.com/xuedong/hacker-rank) and [project-euler](ttps://github.com/xuedong/project-euler) repos.
 
 ## Table of Contents
 
