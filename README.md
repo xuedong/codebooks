@@ -1,5 +1,5 @@
 # Code Books
-Implementations of various algorithms using different programming languages (Python, Rust, Go, OCaml, C/C++, etc), demo with Jupyter notebook (Jupyter notebook may be not available for all the languages mentioned beforehand, we'll see...). This repo will only contain classic algorithms in different computer science related fields, for more implementations, see also my [hacker-rank](https://github.com/xuedong/hacker-rank) and [project-euler](https://github.com/xuedong/project-euler) repos.
+Implementations of various algorithms using different programming languages (Python, Rust, Go, OCaml, C/C++, Ruby, etc), demo with Jupyter notebook (Jupyter notebook may be not available for all the languages mentioned beforehand, we'll see...). This repo will only contain classic algorithms in different computer science related fields, for more implementations, see also my [hacker-rank](https://github.com/xuedong/hacker-rank) and [project-euler](https://github.com/xuedong/project-euler) repos.
 
 ## Table of Contents
 
@@ -12,6 +12,14 @@ Implementations of various algorithms using different programming languages (Pyt
 - [ ] [Data Structures](https://github.com/xuedong/codebooks/tree/master/data_structures)
 - [ ] [Mathematics Fundamentals](https://github.com/xuedong/codebooks/tree/master/maths)
 - [ ] [Machine Learning](https://github.com/xuedong/codebooks/tree/master/machine_learning)
+    - [ ] [Regression]
     - [x] [Clustering](https://github.com/xuedong/codebooks/blob/master/machine_learning/clustering/clustering.ipynb): k-means and hierarchial clustering with fast closest pair computation, demo with US county per-capita lifetime cancer risk dataset. (Python)
+    - [ ] [Support Vector Machine]
+    - [ ] [Principle Component Analysis]
+    - [ ] [Neural Network]
+    - [ ] [Nearest Neighbour]
+    - [ ] [Naive Bayes]
+    - [ ] [Hidden Markov Model]
+    - [ ] [Gaussian Mixture Model]
 - [ ] [Distributed Systems](https://github.com/xuedong/codebooks/tree/master/distributed_computing)
 - [ ] [Security](https://github.com/xuedong/codebooks/tree/master/security)
