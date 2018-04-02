@@ -12,14 +12,16 @@ Implementations of various algorithms using different programming languages (Pyt
 - [ ] [Data Structures](https://github.com/xuedong/codebooks/tree/master/data_structures)
 - [ ] [Mathematics Fundamentals](https://github.com/xuedong/codebooks/tree/master/maths)
 - [ ] [Machine Learning](https://github.com/xuedong/codebooks/tree/master/machine_learning)
-    - [ ] [Regression]
+    - [ ] [Regression](https://github.com/xuedong/codebooks/blob/master/machine_learning/regression/regression.ipynb)
     - [x] [Clustering](https://github.com/xuedong/codebooks/blob/master/machine_learning/clustering/clustering.ipynb): k-means and hierarchial clustering with fast closest pair computation, demo with US county per-capita lifetime cancer risk dataset. (Python)
-    - [ ] [Support Vector Machine]
-    - [ ] [Principle Component Analysis]
-    - [ ] [Neural Network]
-    - [ ] [Nearest Neighbour]
-    - [ ] [Naive Bayes]
-    - [ ] [Hidden Markov Model]
-    - [ ] [Gaussian Mixture Model]
+    - [ ] [Support Vector Machine](https://github.com/xuedong/codebooks/blob/master/machine_learning/svm/svm.ipynb)
+    - [ ] [Principle Component Analysis](https://github.com/xuedong/codebooks/blob/master/machine_learning/pca/pca.ipynb)
+    - [ ] [Neural Network](https://github.com/xuedong/codebooks/blob/master/machine_learning/mlp/mlp.ipynb)
+    - [ ] [Nearest Neighbour](https://github.com/xuedong/codebooks/blob/master/machine_learning/knn/knn.ipynb)
+    - [ ] [Naive Bayes](https://github.com/xuedong/codebooks/blob/master/machine_learning/bayes/bayes.ipynb)
+    - [ ] [Hidden Markov Model](https://github.com/xuedong/codebooks/blob/master/machine_learning/hmm/hmm.ipynb)
+    - [ ] [Gaussian Mixture Model](https://github.com/xuedong/codebooks/blob/master/machine_learning/gmm/gmm.ipynb)
+    - [ ] [Random Forest](https://github.com/xuedong/codebooks/blob/master/machine_learning/random_forest/random_forest.ipynb)
+    - [ ] [AdaBoost](https://github.com/xuedong/codebooks/blob/master/machine_learning/adaboost/adaboost.ipynb)
 - [ ] [Distributed Systems](https://github.com/xuedong/codebooks/tree/master/distributed_computing)
 - [ ] [Security](https://github.com/xuedong/codebooks/tree/master/security)
