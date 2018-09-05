@@ -14,7 +14,7 @@ Implementations of various algorithms using different programming languages (Pyt
 - [ ] [Machine Learning](https://github.com/xuedong/codebooks/tree/master/machine_learning)
     - [ ] [Regression](https://github.com/xuedong/codebooks/blob/master/machine_learning/regression)
     	- [ ] [Linear Regression](https://github.com/xuedong/codebooks/blob/master/machine_learning/regression/linear_regression/web_traffic.ipynb)
-	- [ ] [Logistic Regression](https://github.com/xuedong/codebooks/blob/master/machine_learning/regression/linear_regression/web_traffic.ipynb)
+	- [ ] [Connected Components](https://github.com/xuedong/codebooks/blob/master/algorithms/graph/connected_components/resilience.ipynb)
 	- [ ] [Ridge Regression](https://github.com/xuedong/codebooks/blob/master/machine_learning/regression/ridge_regression/code_breaking.ipynb)
     - [x] [Clustering](https://github.com/xuedong/codebooks/blob/master/machine_learning/clustering/clustering.ipynb): k-means and hierarchial clustering with fast closest pair computation, demo with US county per-capita lifetime cancer risk dataset. (Python)
     - [ ] [Support Vector Machine](https://github.com/xuedong/codebooks/blob/master/machine_learning/svm/comparison.ipynb)
