@@ -15,7 +15,7 @@ Implementations of various algorithms using different programming languages (Pyt
     - [ ] [Regression](https://github.com/xuedong/codebooks/blob/master/machine_learning/regression)
     	- [ ] [Linear Regression](https://github.com/xuedong/codebooks/blob/master/machine_learning/regression/linear_regression/web_traffic.ipynb): predict page views using simple linear regression. (R)
 	- [ ] [Logistic Regression]()
-    - [x] [Clustering](https://github.com/xuedong/codebooks/blob/master/machine_learning/clustering/clustering.ipynb): k-means and hierarchial clustering with fast closest pair computation, demo with US county per-capita lifetime cancer risk dataset. (Python)
+	- [x] [Clustering](https://github.com/xuedong/codebooks/blob/master/machine_learning/clustering/clustering.ipynb): k-means and hierarchial clustering with fast closest pair computation, demo with US county per-capita lifetime cancer risk dataset. (Python)
     - [ ] [Support Vector Machine](https://github.com/xuedong/codebooks/blob/master/machine_learning/svm/comparison.ipynb)
     - [ ] [Principle Component Analysis](https://github.com/xuedong/codebooks/blob/master/machine_learning/pca/market.ipynb)
     - [ ] [Neural Network](https://github.com/xuedong/codebooks/blob/master/machine_learning/mlp/mlp.ipynb)
