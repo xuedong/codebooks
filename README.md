@@ -4,9 +4,9 @@ Implementations of various algorithms using different programming languages (Pyt
 ## Table of Contents
 
 - [ ] [Basic Algorithms](https://github.com/xuedong/codebooks/tree/master/algorithms)
-    - [ ] [Graph Theory](https://github.com/xuedong/codebooks/tree/master/algorithms/graph)
-        - [ ] [Directed Graphs](https://github.com/xuedong/codebooks/blob/master/algorithms/graph/digraph/digraph.ipynb): random digraph generation, demo with a paper citation graph analysis. (Python)
-        - [ ] [Connected Components](https://github.com/xuedong/codebooks/blob/master/algorithms/graph/connected_components/resilience.ipynb): compute connected components of a graph using breadth-first search, demo on the computation of the resilience of a computer network. (Python)
+	- [ ] [Graph Theory](https://github.com/xuedong/codebooks/tree/master/algorithms/graph)
+        	- [ ] [Directed Graphs](https://github.com/xuedong/codebooks/blob/master/algorithms/graph/digraph/digraph.ipynb): random digraph generation, demo with a paper citation graph analysis. (Python)
+        	- [ ] [Connected Components](https://github.com/xuedong/codebooks/blob/master/algorithms/graph/connected_components/resilience.ipynb): compute connected components of a graph using breadth-first search, demo on the computation of the resilience of a computer network. (Python)
     - [ ] [Dynamic Programming](https://github.com/xuedong/codebooks/tree/master/algorithms/dynamic_programming)
         - [x] [Sequence Alignment 1](https://github.com/xuedong/codebooks/blob/master/algorithms/dynamic_programming/sequence_alignment/genomics.ipynb), [Sequence Alignment 2](https://github.com/xuedong/codebooks/blob/master/algorithms/dynamic_programming/sequence_alignment/spelling_check.ipynb): global and local sequence alignment algorithms using dynamic programming technique, 2 demos with one example on computational genomics, and one on Levenshtein distance. (Python)
 - [ ] [Data Structures](https://github.com/xuedong/codebooks/tree/master/data_structures)
