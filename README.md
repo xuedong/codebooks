@@ -11,7 +11,7 @@ Implementations of various algorithms using different programming languages (Pyt
         - [x] [Sequence Alignment 1](https://github.com/xuedong/codebooks/blob/master/algorithms/dynamic_programming/sequence_alignment/genomics.ipynb), [Sequence Alignment 2](https://github.com/xuedong/codebooks/blob/master/algorithms/dynamic_programming/sequence_alignment/spelling_check.ipynb): global and local sequence alignment algorithms using dynamic programming technique, 2 demos with one example on computational genomics, and one on Levenshtein distance. (Python)
 - [ ] [Data Structures](https://github.com/xuedong/codebooks/tree/master/data_structures)
 - [ ] [Mathematics Fundamentals](https://github.com/xuedong/codebooks/tree/master/maths)
-    - [ ] [Random Number Generators](https://github.com/xuedong/codebooks/tree/master/maths/prng)
+    - [ ] [Random Number Generators](https://github.com/xuedong/codebooks/tree/master/maths/prng): Mersenne twister. (C++)
 - [ ] [Machine Learning](https://github.com/xuedong/codebooks/tree/master/machine_learning)
     - [ ] [Regression](https://github.com/xuedong/codebooks/blob/master/machine_learning/regression)
     	- [ ] [Linear Regression](https://github.com/xuedong/codebooks/blob/master/machine_learning/regression/linear_regression/web_traffic.ipynb)
